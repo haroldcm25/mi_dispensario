@@ -1,0 +1,9 @@
+<odoo>
+    <menuitem
+        id="mi_dispensario_menu_principal"
+        name="Mi Dispensario"
+        sequence="99"
+        web_icon="mi_dispensario,static/description/icon.png"
+        active="True"
+        />
+</odoo>
