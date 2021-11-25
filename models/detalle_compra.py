@@ -12,7 +12,7 @@ class DetalleCompra(models.Model):
      cantidad = fields.Integer("Cantidad")
 
      #orden de compra
-     orden_compra_id = fields.Many2one('orden', string="Orden de Compra")  # required=False
+     orden_compra_id = fields.Many2one('orden_compra', string="Orden de Compra")  # required=False
 
      #producto
      producto_id = fields.Many2one('producto', string="Producto" )

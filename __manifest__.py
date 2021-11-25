@@ -6,6 +6,9 @@
         Resumen de qué hace el módulo de Dispensario
      """,
 
+    'license': 'LGPL-3',
+
+
     'description': """
         Descripción de Módulo dispensario
     """,
@@ -28,8 +31,10 @@
     'installable': True,
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
+        'security/mi_dispensario_security.xml',
+        'security/ir.model.access.csv',
         'views/menu.xml',
+        'views/proveedor_views.xml'
         #'views/templates.xml',
     ]
 }

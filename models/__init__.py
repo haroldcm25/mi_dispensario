@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 #tarea: ordenar los archivos por alfabeto
-from . import formula
 from . import proveedor
 from . import laboratorio
 from . import bodega
@@ -11,14 +10,18 @@ from . import forma
 from . import movimiento
 from . import principio
 from . import presentacion
-from . import producto
+from . import orden_compra
 
 # relacionales
-
-from . import medico
 from . import paciente
-from . import puntos_dispensacion
-from . import orden_compra
+from . import medico
+from . import producto
+from . import producto_lote
 from . import detalle_compra
 from . import kardex
-from . import producto_lote
+from . import puntos_dispensacion
+from . import formula
+from . import detalle_formula
+
+
+

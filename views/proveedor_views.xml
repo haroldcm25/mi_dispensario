@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="mi_dispensario_proveedor_form_view" model="ir.ui.view">
+		<field name="name">product_rvc_form</field>
+		<field name="model">proveedor</field>
+		<field name="arch" type="xml">
+			<form string="Products">
+				<header>
+				</header>
+				<sheet>
+					<group>
+						<field name="name"/>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+<!--	<record id="product_rvc_tree" model="ir.ui.view">-->
+<!--		<field name="name">product.rvc.tree</field>-->
+<!--		<field name="model">product.rvc</field>-->
+<!--		<field name="arch" type="xml">-->
+<!--			<tree string="Products" >-->
+<!--				<field name="name"/>-->
+<!--				<field name="code"/>-->
+<!--				<field name="company_id"/>-->
+<!--				<field name="benefit_type"/>-->
+<!--				<field name="state"/>-->
+<!--			</tree>-->
+<!--		</field>-->
+<!--	</record>-->
+
+	<record id="action_product_rvc" model="ir.actions.act_window">
+		<field name="name">Proveedor</field>
+		<field name="res_model">proveedor</field>
+		<field name="view_mode">form</field>
+	</record>
+
+	<menuitem
+		id="hr_menu_product_rvc"
+		name="Proveedores"
+		action="action_product_rvc"
+		parent="mi_dispensario.mi_dispensario_menu_principal"
+		sequence="1"
+		groups="mi_dispensario.group_mi_dispensario_user"/>
+
+</odoo>

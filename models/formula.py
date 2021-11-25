@@ -13,7 +13,7 @@ class Formula(models.Model):
      fecha_factura = fields.Date("Fecha factura")
 
      #punto dispensacion
-     punto_dispensacion_id = fields.Many2one('punto_dispensacion', string="Punto dispensación" ) #required=False
+     punto_dispensacion_id = fields.Many2one('puntos_dispensacion', string="Punto dispensación" ) #required=False
 
      #cliente
      cliente_id = fields.Many2one('cliente', string="Cliente Relacionado")
