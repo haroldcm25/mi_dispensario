@@ -1,5 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-mi_dispensario.access_proveedor,access_proveedor,mi_dispensario.model_proveedor,mi_dispensario.group_mi_dispensario_user,1,1,1,0
+mi_dispensario.access_proveedor,access_proveedor,mi_dispensario.model_proveedor,mi_dispensario.group_mi_dispensario_user,1,1,1,1
 mi_dispensario.access_laboratorio,access_laboratorio,mi_dispensario.model_laboratorio,mi_dispensario.group_mi_dispensario_user,1,1,1,1
 mi_dispensario.access_detalle_formula,access_detalle_formula,mi_dispensario.model_detalle_formula,mi_dispensario.group_mi_dispensario_user,1,1,1,1
 mi_dispensario.access_forma,access_forma,mi_dispensario.model_forma,mi_dispensario.group_mi_dispensario_user,1,1,1,1

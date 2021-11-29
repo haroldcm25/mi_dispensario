@@ -8,3 +8,6 @@ class Proveedor(models.Model):
     _description = 'proveedor de productos de dispensario'
 
     name = fields.Char("Nombre")
+
+    # def funcion_mi_boton(self):
+    #     pass

@@ -1,9 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <menuitem
-        id="mi_dispensario_menu_principal"
         name="Mi Dispensario"
+        id="mi_dispensario_menu_principal"
         sequence="99"
+        groups="group_mi_dispensario_user"
         web_icon="mi_dispensario,static/description/icon.png"
-        active="True"
         />
 </odoo>

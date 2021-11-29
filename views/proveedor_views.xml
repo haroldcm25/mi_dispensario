@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 	<record id="mi_dispensario_proveedor_form_view" model="ir.ui.view">
-		<field name="name">product_rvc_form</field>
+		<field name="name">dispensario_proveedor_form</field>
 		<field name="model">proveedor</field>
 		<field name="arch" type="xml">
-			<form string="Products">
+			<form string="Proveedor">
 				<header>
+<!--					<button name="funcion_mi_boton" string="Mi botón" type="object" class="btn btn-warning"/>-->
 				</header>
 				<sheet>
 					<group>
@@ -16,30 +17,27 @@
 		</field>
 	</record>
 
-<!--	<record id="product_rvc_tree" model="ir.ui.view">-->
-<!--		<field name="name">product.rvc.tree</field>-->
-<!--		<field name="model">product.rvc</field>-->
-<!--		<field name="arch" type="xml">-->
-<!--			<tree string="Products" >-->
-<!--				<field name="name"/>-->
-<!--				<field name="code"/>-->
-<!--				<field name="company_id"/>-->
-<!--				<field name="benefit_type"/>-->
-<!--				<field name="state"/>-->
-<!--			</tree>-->
-<!--		</field>-->
-<!--	</record>-->
+	<record id="mi_dispensario_proveedor_tree_view" model="ir.ui.view">
+		<field name="name">dispensario_proveedor_tree</field>
+		<field name="model">proveedor</field>
+		<field name="arch" type="xml">
+			<tree string="Proveedores">
+				<field name="name"/>
+			</tree>
+		</field>
+	</record>
 
-	<record id="action_product_rvc" model="ir.actions.act_window">
+	<record id="action_proveedor_rvc" model="ir.actions.act_window">
 		<field name="name">Proveedor</field>
 		<field name="res_model">proveedor</field>
-		<field name="view_mode">form</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="view_mode">tree,form</field>
 	</record>
 
 	<menuitem
-		id="hr_menu_product_rvc"
+		id="hr_menu_proveedor_rvc"
 		name="Proveedores"
-		action="action_product_rvc"
+		action="action_proveedor_rvc"
 		parent="mi_dispensario.mi_dispensario_menu_principal"
 		sequence="1"
 		groups="mi_dispensario.group_mi_dispensario_user"/>
