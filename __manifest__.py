@@ -34,7 +34,16 @@
         'security/mi_dispensario_security.xml',
         'security/ir.model.access.csv',
         'views/menu.xml',
-        'views/proveedor_views.xml'
+        'views/principio_views.xml',
+        'views/bodega_views.xml',
+        'views/clasifica_producto_views.xml',
+        'views/cliente_views.xml',
+        'views/forma_views.xml',
+        'views/proveedor_views.xml',
+        'views/laboratorio_views.xml',
+        'views/movimiento_views.xml',
+        'views/presentacion_views.xml',
+        'views/orden_compra_views.xml'
         #'views/templates.xml',
     ]
 }

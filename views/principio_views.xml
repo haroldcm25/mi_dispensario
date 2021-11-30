@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-	<record id="mi_dispensario_proveedor_form_view" model="ir.ui.view">
-		<field name="name">dispensario_proveedor_form</field>
-		<field name="model">proveedor</field>
+    <record id="mi_dispensario_principio_form_view" model="ir.ui.view">
+		<field name="name">dispensario_principio_form</field>
+		<field name="model">principio</field>
 		<field name="arch" type="xml">
-			<form string="Proveedor">
+			<form string="Principio">
 				<header>
 <!--					<button name="funcion_mi_boton" string="Mi botón" type="object" class="btn btn-warning"/>-->
 				</header>
@@ -17,29 +17,28 @@
 		</field>
 	</record>
 
-	<record id="mi_dispensario_proveedor_tree_view" model="ir.ui.view">
-		<field name="name">dispensario_proveedor_tree</field>
-		<field name="model">proveedor</field>
+	<record id="mi_dispensario_principio_tree_view" model="ir.ui.view">
+		<field name="name">dispensario_principio_tree</field>
+		<field name="model">principio</field>
 		<field name="arch" type="xml">
-			<tree string="Proveedores">
+			<tree string="Principio">
 				<field name="name"/>
 			</tree>
 		</field>
 	</record>
 
-	<record id="action_proveedor_rvc" model="ir.actions.act_window">
-		<field name="name">Proveedor</field>
-		<field name="res_model">proveedor</field>
+	<record id="action_principio_rvc" model="ir.actions.act_window">
+		<field name="name">Principio</field>
+		<field name="res_model">principio</field>
 		<field name="type">ir.actions.act_window</field>
 		<field name="view_mode">tree,form</field>
 	</record>
 
 	<menuitem
-		id="hr_menu_proveedor_rvc"
-		name="Proveedores"
-		action="action_proveedor_rvc"
+		id="hr_menu_principio_rvc"
+		name="Principio"
+		action="action_principio_rvc"
 		parent="mi_dispensario.mi_dispensario_menu_principal"
-		sequence="5"
+		sequence="1"
 		groups="mi_dispensario.group_mi_dispensario_user"/>
-
 </odoo>

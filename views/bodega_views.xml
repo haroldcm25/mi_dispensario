@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="mi_dispensario_bodega_form_view" model="ir.ui.view">
+        <field name="name">dispensario_bodega_form</field>
+        <field name="model">bodega</field>
+        <field name="arch" type="xml">
+            <form string="Bodega">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="mi_dispensario_bodega_tree_view" model="ir.ui.view">
+        <field name="name">dispensario_bodega</field>
+        <field name="model">bodega</field>
+        <field name="arch" type="xml">
+            <tree string="Bodega">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_bodega_rvc" model="ir.actions.act_window">
+		<field name="name">Bodega</field>
+		<field name="res_model">bodega</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+
+	<menuitem
+		id="hr_menu_bodega_rvc"
+		name="Bodega"
+		action="action_bodega_rvc"
+		parent="mi_dispensario.mi_dispensario_menu_principal"
+		sequence="6"
+		groups="mi_dispensario.group_mi_dispensario_user"/>
+</odoo>

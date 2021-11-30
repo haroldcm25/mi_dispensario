@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="mi_dispensario_orden_compra_form_view" model="ir.ui.view">
+        <field name="name">dispensario_orden_compra_form</field>
+        <field name="model">orden_compra</field>
+        <field name="arch" type="xml">
+            <form string="Orden compra">
+                <sheet>
+                    <group>
+                        <!-- <field name="id_proveedor"/> lista proveedor-->
+                        <field name="descripcion"/>
+                        <field name="formas_pago"/>
+                        <field name="total"/><!--calculado-->
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="mi_dispensario_orden_compra_tree_view" model="ir.ui.view">
+        <field name="name">dispensario_orden_compra_tree</field>
+        <field name="model">orden_compra</field>
+        <field name="arch" type="xml">
+            <tree string="Orden compra">
+                <!-- <field name="id_proveedor"/> proveedor-->
+                <field name="descripcion"/>
+                <field name="formas_pago"/>
+                <field name="total"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_orden_compra_rvc" model="ir.actions.act_window">
+        <field name="name">Orden de compra</field>
+        <field name="res_model">orden_compra</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+
+	<menuitem
+		id="hr_menu_orden_compra_rvc"
+		name="Orden de compra"
+		action="action_orden_compra_rvc"
+		parent="mi_dispensario.mi_dispensario_menu_principal"
+		sequence="10"
+		groups="mi_dispensario.group_mi_dispensario_user"/>
+</odoo>

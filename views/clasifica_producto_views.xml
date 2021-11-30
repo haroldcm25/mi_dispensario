@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="mi_dispensario_clasifica_producto_form_view" model="ir.ui.view">
+        <field name="name">dispensario_clasifica_producto_form</field>
+        <field name="model">clasifica_producto</field>
+        <field name="arch" type="xml">
+            <form string="clasifica_producto">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="mi_dispensario_clasifica_producto_tree_view" model="ir.ui.view">
+        <field name="name">dispensario_clasifica_producto_tree</field>
+        <field name="model">clasifica_producto</field>
+        <field name="arch" type="xml">
+            <tree string="clasifica_producto">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_clasifica_producto_rvc" model="ir.actions.act_window">
+        <field name="name">Clasificación de producto</field>
+		<field name="res_model">clasifica_producto</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+		id="hr_menu_clasifica_producto_rvc"
+		name="Clasificación de producto"
+		action="action_clasifica_producto_rvc"
+		parent="mi_dispensario.mi_dispensario_menu_principal"
+		sequence="9"
+		groups="mi_dispensario.group_mi_dispensario_user"/>
+</odoo>

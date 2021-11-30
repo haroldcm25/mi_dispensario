@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="mi_dispensario_presentacion_form_view" model="ir.ui.view">
+        <field name="name">dispensario_presentacion_form</field>
+        <field name="model">presentacion</field>
+        <field name="arch" type="xml">
+            <form string="presentacion">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="cantidad_x_presentacion"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="mi_dispensario_presentacion_tree_view" model="ir.ui.view">
+        <field name="name">dispensario_presentacion_tree</field>
+        <field name="model">presentacion</field>
+        <field name="arch" type="xml">
+            <tree string="presentacion">
+                <field name="name"/>
+                <field name="cantidad_x_presentacion"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_presentacion_rvc" model="ir.actions.act_window">
+        <field name="name">Presentacion</field>
+		<field name="res_model">presentacion</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+		id="hr_menu_presentacion_rvc"
+		name="Presentacion"
+		action="action_presentacion_rvc"
+		parent="mi_dispensario.mi_dispensario_menu_principal"
+		sequence="8"
+		groups="mi_dispensario.group_mi_dispensario_user"/>
+</odoo>

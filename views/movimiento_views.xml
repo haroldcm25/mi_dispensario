@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="mi_dispensario_movimiento_form_view" model="ir.ui.view">
+        <field name="name">dispensario_movimiento_form</field>
+        <field name="model">movimiento</field>
+        <field name="arch" type="xml">
+            <form string="Movimiento">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="mi_dispensario_movimiento_tree_view" model="ir.ui.view">
+        <field name="name">dispensario_movimiento_tree</field>
+        <field name="model">movimiento</field>
+        <field name="arch" type="xml">
+            <tree string="movimiento">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_movimiento_rvc" model="ir.actions.act_window">
+        <field name="name">Movimiento</field>
+		<field name="res_model">movimiento</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+
+	<menuitem
+		id="hr_menu_movimiento_rvc"
+		name="Movimiento"
+		action="action_movimiento_rvc"
+		parent="mi_dispensario.mi_dispensario_menu_principal"
+		sequence="7"
+		groups="mi_dispensario.group_mi_dispensario_user"/>
+</odoo>

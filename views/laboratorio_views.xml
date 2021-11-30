@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="mi_dispensario_laboratorio_form_view" model="ir.ui.view">
+        <field name="name">dispensario_laboratorio_form</field>
+        <field name="model">laboratorio</field>
+        <field name="arch" type="xml">
+            <form string="Laboratorio">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="mi_dispensario_laboratorio_tree_view" model="ir.ui.view">
+        <field name="name">dispensario_laboratorio_tree</field>
+        <field name="model">laboratorio</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_laboratorio_rvc" model="ir.actions.act_window">
+        <field name="name">Laboratorio</field>
+        <field name="res_model">laboratorio</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+
+	<menuitem
+		id="hr_menu_laboratorio_rvc"
+		name="Laboratorio"
+		action="action_laboratorio_rvc"
+		parent="mi_dispensario.mi_dispensario_menu_principal"
+		sequence="4"
+		groups="mi_dispensario.group_mi_dispensario_user"/>
+</odoo>

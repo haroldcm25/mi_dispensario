@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="mi_dispensario_cliente_form_view" model="ir.ui.view">
+        <field name="name">dispensario_cliente_form</field>
+        <field name="model">cliente</field>
+        <field name="arch" type="xml">
+            <form string="Cliente">
+                <sheet>
+                    <group>
+                        <field name="nit_cliente"/>
+                        <field name="razon_social"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="mi_dispensario_cliente_tree_view" model="ir.ui.view">
+        <field name="name">dispensario_cliente_tree</field>
+        <field name="model">cliente</field>
+        <field name="arch" type="xml">
+            <tree string="Cliente">
+                <field name="nit_cliente"/>
+                <field name="razon_social"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_cliente_rvc" model="ir.actions.act_window">
+        <field name="name">Cliente</field>
+		<field name="res_model">cliente</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+		id="hr_menu_cliente_rvc"
+		name="Cliente"
+		action="action_cliente_rvc"
+		parent="mi_dispensario.mi_dispensario_menu_principal"
+		sequence="8"
+		groups="mi_dispensario.group_mi_dispensario_user"/>
+</odoo>
